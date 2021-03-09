@@ -1,5 +1,5 @@
 --- 
-title: "eThis is my Data Structure"
+title: "This is my Data Structure"
 author: "Jes Braun"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
