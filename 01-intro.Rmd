@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
 ```
 
-**THIS IS MY ATTEMPT AT R MARKDOWN**  
+**THIS IS MY ATTEMPT AT R MARKDOWN**   
 ~~I know what I am doing~~
   
 # How I built my database
