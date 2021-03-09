@@ -1,4 +1,4 @@
-h1:intro Introduction
-fig:nice-fig Here is a nice figure!
-tab:nice-tab Here is a nice table!
+h1:how-i-built-my-database How I built my database
+h2:this-is-what-my-code-looked-like This is what my code looked like
+h2:this-is-my-schema This is my schema
 

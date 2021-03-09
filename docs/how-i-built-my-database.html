@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Assignment 6</title>
+  <title>Chapter 2 How I built my database | Assignment 6</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Assignment 6" />
+  <meta property="og:title" content="Chapter 2 How I built my database | Assignment 6" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Assignment 6" />
+  <meta name="twitter:title" content="Chapter 2 How I built my database | Assignment 6" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="index.html"/>
 
-<link rel="next" href="how-i-built-my-database.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -158,31 +158,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Assignment 6</h1>
-<p class="author"><em>Jes Braun</em></p>
-<p class="date"><em>2/26/2021</em></p>
+<div id="how-i-built-my-database" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> How I built my database</h1>
+<p>My database is not very fancy because it is all imaginary data at this time. I used SQLite Studio to build my tables and linked them with Primary Keys. You can find that database <a href="https://github.com/jesbraun/utah_lake/blob/main/plant_database.db">here</a>.</p>
+<p>I couldn’t figure out how to link the foreign keys, so acknowledge that gap in my database</p>
+<div id="this-is-what-my-code-looked-like" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> This is what my code looked like</h2>
+<p>CREATE TABLE plant_list (
+latin_name char(50),
+common_name varchar(50),
+PRIMARY KEY (common_name)
+);</p>
+<p>CREATE TABLE functional_traits (
+latin_name varchar(50),
+growth_rate numb(10),
+root_length numb(10),
+horizontal_spread numb(10),
+PRIMARY KEY (growth_rate)
+);</p>
+<p>CREATE TABLE plant_groups (
+latin_name varchar(50),
+wetland_indicator_status varchar(10),
+life_cycle varchar(50),
+dormancy_breaking_strategy varchar(50),
+PRIMARY KEY (wetland_indicator_status)
+);</p>
+<p>CREATE TABLE seed_collection (
+plant_id varchar(50),
+latin_name char(50),
+collection_site varchar(10),
+name_collector char(10),
+date_collected numb(10),
+PRIMARY KEY (collection_site)
+);</p>
+<p>CREATE TABLE seed_coating (
+plant_id varchar(50),
+coating_type varchar(10),
+latin_name char(50),
+plant_date numb(10),
+PRIMARY KEY (coating_type)
+);</p>
+<p>CREATE TABLE research_plots (
+plot_name char(50),
+plant_id varchar(50),
+longitude numb(50),
+latitude numb(50),
+PRIMARY KEY (plot_name)
+);</p>
 </div>
-<div id="prerequisites" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
+<div id="this-is-my-schema" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> This is my schema</h2>
+<p><img src="https://github.com/jesbraun/utah_lake/blob/main/database_schema.png?raw=true" /></p>
+<p><strong>bold</strong>= primary key. Unique id for each record in that table<br />
+<em>Italics</em> = foreign key, a variable shared between tables</p>
 
-<p><strong>THIS IS MY ATTEMPT AT R MARKDOWN</strong><br />
-<del>I know what I am doing</del></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="how-i-built-my-database.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

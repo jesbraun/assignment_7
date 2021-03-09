@@ -1,10 +1,4 @@
-fig:nice-fig
-tab:nice-tab
 prerequisites
-intro
-literature
-methods
-applications
-example-one
-example-two
-final-words
+how-i-built-my-database
+this-is-what-my-code-looked-like
+this-is-my-schema
